@@ -7,89 +7,117 @@
   <meta name="keywords" content="Ahsanul Hoque Milon, Portfolio, CS, Cybersecurity, Ethical Hacking, Python, HTML, CSS">
   <title>A H Milon | CS Portfolio</title>
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Font Awesome (icon fix) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .contact-btns a { transition: 0.3s; }
+    .contact-btns a:hover { color: #4db8ff; transform: scale(1.2); }
+    #back-to-top { display: none; position: fixed; bottom: 20px; right: 20px; background: #4db8ff; color: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer; transition: 0.3s; }
+    #back-to-top:hover { background: #1e40af; }
+  </style>
 </head>
-<body>
+<body class="bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 text-white">
 
-  <header>
-    <div class="header-content">
-      <img src="profile.jpg" alt="A H Milon" class="profile-pic">
+  <!-- Header -->
+  <header class="flex flex-col md:flex-row items-center justify-between p-6 md:px-12">
+    <div class="flex items-center space-x-4">
+      <img src="profile.jpg" alt="A H Milon" class="w-24 h-24 rounded-full border-2 border-white shadow-lg">
       <div>
-        <h1>Ahsanul Hoque Milon</h1>
-        <p>Beginner Developer | Cybersecurity & Ethical Hacking</p>
+        <h1 class="text-3xl font-bold">Ahsanul Hoque Milon</h1>
+        <p class="text-sm md:text-base opacity-90">Beginner Developer | Cybersecurity & Ethical Hacking</p>
       </div>
     </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="mt-4 md:mt-0 space-x-4 text-white font-semibold">
+      <a href="#about" class="hover:text-blue-400">About</a>
+      <a href="#skills" class="hover:text-blue-400">Skills</a>
+      <a href="#projects" class="hover:text-blue-400">Projects</a>
+      <a href="#contact" class="hover:text-blue-400">Contact</a>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a beginner developer passionate about cybersecurity and ethical hacking. 
-      My goal is to build secure applications and contribute to open-source projects. 
+  <!-- About -->
+  <section id="about" class="px-6 md:px-12 py-10">
+    <h2 class="text-2xl font-bold mb-4">About Me</h2>
+    <p class="md:w-3/4">
+      I'm a beginner developer passionate about cybersecurity and ethical hacking. My goal is to build secure applications and contribute to open-source projects. 
       I enjoy learning new technologies and experimenting with coding challenges.
     </p>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-card">
-      <h3>💻 Languages</h3>
-      <p>Python, HTML, CSS, JavaScript</p>
-    </div>
-    <div class="skill-card">
-      <h3>🔐 Cybersecurity Tools</h3>
-      <p>Nmap, Burp Suite, Kali Linux</p>
-    </div>
-    <div class="skill-card">
-      <h3>🧠 Soft Skills</h3>
-      <p>Problem Solving, Teamwork, Creativity</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Smart Hotel Management System</h3>
-      <p>A PHP/MySQL web app for automating hotel operations.</p>
-      <a href="https://github.com/ahmilon47/hotel-system" target="_blank" class="btn">View Code</a>
-    </div>
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Built using HTML, CSS, and JavaScript hosted on GitHub Pages.</p>
-      <a href="https://ahmilon47.github.io" target="_blank" class="btn">Live Demo</a>
+  <!-- Skills -->
+  <section id="skills" class="px-6 md:px-12 py-10">
+    <h2 class="text-2xl font-bold mb-6">Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow-lg">
+        <h3 class="text-xl mb-2">💻 Languages</h3>
+        <p>Python, HTML, CSS, JavaScript</p>
+      </div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow-lg">
+        <h3 class="text-xl mb-2">🔐 Cybersecurity Tools</h3>
+        <p>Nmap, Burp Suite, Kali Linux</p>
+      </div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow-lg">
+        <h3 class="text-xl mb-2">🧠 Soft Skills</h3>
+        <p>Problem Solving, Teamwork, Creativity</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-btns">
+  <!-- Projects -->
+  <section id="projects" class="px-6 md:px-12 py-10">
+    <h2 class="text-2xl font-bold mb-6">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Smart Hotel Management System</h3>
+        <p class="mb-2">A PHP/MySQL web app for automating hotel operations.</p>
+        <a href="https://github.com/ahmilon47/hotel-system" target="_blank" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">View Code</a>
+      </div>
+      <div class="bg-white bg-opacity-10 p-4 rounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+        <p class="mb-2">Built using HTML, CSS, and JavaScript hosted on GitHub Pages.</p>
+        <a href="https://ahmilon47.github.io" target="_blank" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-500">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-6 md:px-12 py-10">
+    <h2 class="text-2xl font-bold mb-6">Contact</h2>
+    <div class="flex space-x-6 text-2xl contact-btns">
       <a href="https://github.com/ahmilon47" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/ahmilon47" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://facebook.com/ahmilon47" target="_blank"><i class="fab fa-facebook"></i></a>
       <a href="https://instagram.com/ahmilon47" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:ahmilon0047@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-    <p>Email: <a href="mailto:ahmilon0047@gmail.com">ahmilon0047@gmail.com</a></p>
   </section>
 
+  <!-- Back to top -->
   <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
-  <footer>
+  <footer class="text-center py-6 mt-10 border-t border-white border-opacity-20">
     <p>© 2026 Ahsanul Hoque Milon | CS Portfolio</p>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
+  <script>
+    // Back to top button
+    const btn = document.getElementById('back-to-top');
+    window.onscroll = () => {
+      if (window.scrollY > 300) btn.style.display = 'block';
+      else btn.style.display = 'none';
+    };
+    btn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  </script>
+
 </body>
 </html>
